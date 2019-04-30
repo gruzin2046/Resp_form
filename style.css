@@ -38,6 +38,7 @@ h2 {
 }
 
 .mainForm {
+    font-size: 10px;
     position: relative;
     left: 60%;
     top: 200px;
@@ -49,22 +50,70 @@ h2 {
     height: 500px;
 }
 
-.formControl {
-    margin-top: 25px;
-    padding: 0 10px;
-    font-size: 10px;
+.emptyBox {
     height: 30px;
+}
+
+.formControl {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    height: 40px;
     width: 250px;
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.8);
 }
+
+.tooltip {
+    color: #669966;
+    position: relative;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.btn {
+    font-size: 20px;
+    margin: 0 40px;
+    padding: 0 25px;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+
 
 /*checkbox properties*/
 .container {
     display: block;
     position: relative;
     padding-left: 35px;
-    margin: 15px 0;
+    margin: 0 10px 25px 10px;
     cursor: pointer;
     color: rgba(255, 255, 255);
 }
@@ -88,9 +137,9 @@ h2 {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input~.checkmark {
+/* .container:hover input~.checkmark {
     border: 1px solid rgba(0, 0, 0, 0.8);
-}
+} */
 
 /* When the radio button is checked, add a blue background */
 .container input:checked~.checkmark {
