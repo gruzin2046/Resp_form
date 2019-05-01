@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Benhauer</title>
+    <title>Benhauer task</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
     <script src="./app.js"></script>
@@ -14,43 +14,82 @@
         <h1>ZAPISZ SIĘ DO NASZEGO NEWSLETTERA</h1>
         <h2>I ODBIERZ <span>10%</span> RABATU NA SWOJE ZAKUPY!</h2>
     </div>
+
     <section class="main">
-        <form class="mainForm">
-            <div class="emptyBox"></div>
-            <input class='formControl' type="text" placeholder="IMIĘ">
-            <div></div>
-            <input class='formControl' type="text" placeholder="E-MAIL">
-            <input class='formControl' type="text" placeholder="NR TELEFONU">
-            <select class='formControl'>
-                <option value="">MIASTO</option>
-                <option value="k">KRAKÓW</option>
-                <option value="w">WARSZAWA</option>
-                <option value="p">POZNAŃ</option>
-                <option value="g">GDAŃSK</option>
-            </select>
-            <label class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis fugiat,
-                id, autem at mollitia unde eos doloremque quisquam sapiente, cum
-                <span class=tooltip>[Rozwiń]
-                    <p class="tooltiptext">Cześć, mam na imię Albert.</p>
-                </span>
-                <input type="checkbox" checked name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis fugiat,
-                id, autem at mollitia unde eos doloremque quisquam sapiente, cum
-                <span class=tooltip>[Rozwiń]
-                    <p class="tooltiptext">Pozdrawiam sprawdzającego to zadanie.</p>
-                </span>
-                <input type="checkbox" unchecked name="radio">
-                <span class="checkmark"></span>
-            </label>
-            <div class="btnContainer">
-                <button class="btn">WYŚLIJ</button>
+        <div class="mainContainer">
+            <form class="mainForm">
+                <div class="emptyBox"></div>
+                <input class='formControl' type="text" placeholder="IMIĘ" id="name">
+                <div class="warning">
+                    <p></p>
+                </div>
+                <input class='formControl' type="text" placeholder="E-MAIL" id="email">
+                <div class="warning">
+                    <p></p>
+                </div>
+                <input class='formControl' type="text" placeholder="NR TELEFONU" id="phone">
+                <div class="warning">
+                    <p></p>
+                </div>
+                <select class='formControl' id="city">
+                    <option value="">MIASTO</option>
+                    <option value="k">KRAKÓW</option>
+                    <option value="w">WARSZAWA</option>
+                    <option value="p">POZNAŃ</option>
+                    <option value="g">GDAŃSK</option>
+                </select>
+                <div class="warning">
+                    <p></p>
+                </div>
+                <label class="container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis
+                    fugiat,
+                    id, autem at mollitia unde eos doloremque quisquam sapiente, cum
+                    <span class=tooltip>[Rozwiń]
+                        <p class="tooltiptext">Cześć, mam na imię Albert.</p>
+                    </span>
+                    <input type="checkbox" checked name="radio" id="firstCheckbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="warning">
+                    <p></p>
+                </div>
+                <label class="container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis
+                    fugiat,
+                    id, autem at mollitia unde eos doloremque quisquam sapiente, cum
+                    <span class=tooltip>[Rozwiń]
+                        <p class="tooltiptext">Pozdrawiam sprawdzającego to zadanie.</p>
+                    </span>
+                    <input type="checkbox" checked name="radio" id="secondCheckbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="warning">
+                    <p></p>
+                </div>
+                <div class="btnContainer">
+                    <button class="btn" type="submit">WYŚLIJ</button>
+                </div>
+            </form>
+            <div class="mainText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rem fugit facere voluptates, perferendis,
+                assumenda optio deleniti dignissimos perspiciatis ab labore unde voluptatum sunt aliquam eveniet nam
+                provident numquam nihil quaerat similique ipsa dolorum accusamus dolor? Voluptatum nesciunt, perferendis
+                maiores dolore esse corrupti quia nisi illo sint dolorum minus praesentium possimus deserunt sapiente
+                asperiores ad ut neque ipsam facere id dolor? In voluptate repudiandae repellat, facilis numquam
+                sapiente veniam accusantium impedit quo doloribus quisquam aut. Corporis, voluptatibus exercitationem ut
+                quod, vel ipsam amet reiciendis iste quibusdam adipisci incidunt. Obcaecati mollitia nobis animi fugit,
+                possimus inventore debitis adipisci tempora ad illo ullam incidunt, quaerat pariatur modi vero velit
+                dolores voluptates ex voluptas repellendus similique. Maxime numquam esse aliquid omnis, in adipisci sed
+                at aliquam? Dolores, sit illo veniam placeat ullam praesentium quisquam quam inventore quaerat ratione
+                voluptatum quidem. Ex consectetur ab perferendis. Ut fugit, esse nam aliquam harum explicabo sint
+                pariatur magni, corrupti in reprehenderit quia incidunt cum. Ullam doloribus dolore quia reprehenderit
+                asperiores temporibus. Veritatis soluta officia odio dolores numquam odit deserunt iste quis praesentium
+                beatae perspiciatis a aspernatur illum unde et, ratione sint esse accusantium cum cumque deleniti qui
+                sed itaque blanditiis. Pariatur vero explicabo corrupti modi, molestias quibusdam?
             </div>
-        </form>
+        </div>
     </section>
-
-
 </body>
 
 </html>

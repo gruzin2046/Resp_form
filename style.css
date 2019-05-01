@@ -6,14 +6,15 @@
     box-sizing: border-box;
 }
 
+/*header properties*/
 h1 {
-    font-size: 1.5rem;
-    margin: 40px 0;
+    font-size: 1.2rem;
+    margin: 30px 10px;
 }
 
 h2 {
-    font-size: 1.7rem;
-    margin-bottom: 40px;
+    font-size: 1.3rem;
+    margin: 0 10px 30px 10px;
 }
 
 .header {
@@ -23,30 +24,61 @@ h2 {
 }
 
 .header span {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
+/*main section properties*/
 .main {
     background-image: url("http://essentialhome.eu/blog/wp-content/uploads/2018/02/An-Elegant-Easter-Table-Setting-Thats-an-Ode-to-Spring_1.jpg");
-    position: absolute;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
     height: 60%;
     width: 100%;
-    background-size: cover;
 }
 
+.mainContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+}
+
+/*text and scrollbar properties*/
+.mainText {
+    background: rgba(255, 255, 255, 0.8);
+    width: 300px;
+    height: 100px;
+    overflow-y: auto;
+    border-radius: 11px;
+    padding: 5px;
+    margin: 40px 0;
+}
+
+.mainText::-webkit-scrollbar {
+    background-color: #e1e1e1;
+    border-radius: 11px;
+    width: 22px;
+}
+
+.mainText::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border: 2px solid #e1e1e1;
+    border-radius: 50%;
+    height: 22px;
+}
+
+/*form properties*/
 .mainForm {
-    font-size: 10px;
-    position: relative;
-    left: 60%;
-    top: 200px;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 10px;
     width: 300px;
-    background: rgba(0, 0, 0, 0.8);
     height: 500px;
 }
 
@@ -55,14 +87,23 @@ h2 {
 }
 
 .formControl {
-    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
     padding: 0 20px;
     height: 40px;
     width: 250px;
-    border-radius: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    cursor: pointer;
 }
 
+.warning {
+    color: #e90027;
+    font-size: 10px;
+    padding: 5px 15px;
+    height: 30px;
+    width: 250px;
+}
+
+/*tooltip properties*/
 .tooltip {
     color: #669966;
     position: relative;
@@ -74,22 +115,23 @@ h2 {
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
     background-color: #555;
     color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s;
     text-align: center;
-    border-radius: 6px;
-    padding: 10px;
     position: absolute;
+    visibility: hidden;
+    border-radius: 6px;
     z-index: 1;
+    padding: 10px;
+    margin-left: -60px;
     bottom: 125%;
     left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    width: 120px;
 }
 
+/*button properties*/
 .btnContainer {
     display: flex;
     justify-content: flex-end;
@@ -97,74 +139,116 @@ h2 {
 }
 
 .btn {
-    font-size: 20px;
-    margin: 0 40px;
-    padding: 0 25px;
-    height: 40px;
-    border-radius: 40px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 40px;
+    font-size: 20px;
+    margin: 0 40px 20px 40px;
+    padding: 0 25px;
+    height: 40px;
+    cursor: pointer;
 }
-
-
 
 /*checkbox properties*/
 .container {
+    color: #fff;
     display: block;
     position: relative;
     padding-left: 35px;
-    margin: 0 10px 25px 10px;
+    margin: 0 10px;
     cursor: pointer;
-    color: rgba(255, 255, 255);
 }
 
-/* Hide the browser's default radio button */
 .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Create a custom radio button */
 .checkmark {
+    background-color: #fff;
     position: absolute;
+    border-radius: 50%;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: rgba(255, 255, 255);
-    border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
-/* .container:hover input~.checkmark {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-} */
-
-/* When the radio button is checked, add a blue background */
 .container input:checked~.checkmark {
+    background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    background-color: rgba(255, 255, 255);
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-    content: "";
     position: absolute;
+    content: "";
     display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .container input:checked~.checkmark:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .container .checkmark:after {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
     top: 2px;
     left: 2px;
     width: 19px;
     height: 19px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.8);
+}
+
+
+@media screen and (min-width: 800px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .header span {
+        font-size: 2.2rem;
+    }
+
+    .main {
+        position: absolute;
+    }
+
+    .mainContainer {
+        display: block;
+        height: 500px;
+    }
+
+    .mainForm {
+        position: relative;
+        left: 55%;
+        top: 40%;
+    }
+
+    .mainText {
+        position: relative;
+        left: 10%;
+        top: 10%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mainForm {
+        width: 450px;
+        font-size: 12px;
+    }
+
+    .warning,
+    .formControl {
+        width: 400px;
+    }
+
+    .mainText {
+        width: 450px;
+        left: -10%;
+    }
 }
